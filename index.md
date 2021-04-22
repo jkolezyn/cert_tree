@@ -39,4 +39,16 @@ $ cert_tree.py -pe ca_list_new.pem
 ━ RootCert           [5] [valid until: 2029-04-28 14:53:22]
     ┣━ other         [6] [valid until: 2022-09-05 21:32:11]
     ┗━ AnotherOne    [7] [valid until: 2023-10-06 15:30:47]
+    
+cert_tree.py -pe ~/.certs/mycert.pem
+━ RootCert                [3] [valid until: 2031-07-08 17:57:15]
+    ┗━ IntermediateCert   [2] [valid until: 2023-07-08 18:55:58]
+        ┗━ UserCert       [1] [valid until: 2023-09-17 13:33:00]
+        
+cert_tree.py ~/.certs/myothercert.pem
+━ ClientCA (NOT PRESENT IN THIS PEM FILE)
+    ┗━ UserCert
+━ RootCert
+    ┗━ IntermediateCert
+━ OtherCert
 ```
