@@ -1,6 +1,6 @@
 ## cert_tree
 
-cert_tree.py --help                                                                                 [9:49:26]
+cert_tree.py --help 
 usage: cert_tree.py [-h] [-p] [-e] [-r] cert_file
 
 View tree of certificates from pem file
