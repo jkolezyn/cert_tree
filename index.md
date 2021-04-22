@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## cert_tree
 
-You can use the [editor on GitHub](https://github.com/jkolezyn/cert_tree/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+cert_tree.py --help                                                                                 [9:49:26]
+usage: cert_tree.py [-h] [-p] [-e] [-r] cert_file
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+View tree of certificates from pem file
 
-### Markdown
+positional arguments:
+  cert_file             the cert file in pem format
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jkolezyn/cert_tree/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+optional arguments:
+  -h, --help            show this help message and exit
+  -p, --position        show position of cert in file
+  -e, --expiry          show expiry date
+  -r, --remove_expired  remove expired certs and output the good ones to stderr
