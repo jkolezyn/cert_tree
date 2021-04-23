@@ -1,6 +1,8 @@
 # cert_tree
 Simple script to view a couple of x509 certificates stored in a single PEM file as a tree. It also enables viewing expiry date and purging expired certificates.
 
+Note: it builds the tree looking only at Subject and Issuer fields. It does NOT validate the certificate chain.
+
 ### Example:
 ```
 cert_tree.py -p ./certs/ca_list.pem  
