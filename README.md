@@ -1,5 +1,5 @@
 # cert_tree
-Simple script to view a couple of x509 certificates stored in a single PEM file as a tree. It also enables viewing expiry date and purging expired certificates.
+Simple script to view a chain of x509 certificates stored in a single PEM file as a tree. It also enables viewing expiry dates and purging expired certificates.
 
 Note: it builds the tree looking only at Subject and Issuer fields. It does NOT validate the certificate chain.
 
