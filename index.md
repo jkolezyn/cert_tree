@@ -4,7 +4,7 @@
 cert_tree.py --help 
 usage: cert_tree.py [-h] [-p] [-e] [-r] cert_file
 
-View tree of certificates from pem file
+View tree of certificates in pem bundle
 
 positional arguments:
   cert_file             the cert file in pem format
@@ -16,7 +16,7 @@ optional arguments:
   -r, --remove_expired  remove expired certs and output the good ones to stderr
 ```
 
-### Example:
+### Examples:
 
 ```
 cert_tree.py -p ~/.certs/ca_list.pem  
