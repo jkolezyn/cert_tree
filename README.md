@@ -3,7 +3,7 @@ Simple script to view a chain of x509 certificates stored in a single PEM file a
 
 Note: it builds the tree looking only at Subject and Issuer fields. It does NOT validate the certificate chain.
 
-### Example:
+### Examples:
 ```
 cert_tree.py -p ~/.certs/ca_list.pem  
 ━ CorpRoot            [1]
