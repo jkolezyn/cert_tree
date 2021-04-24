@@ -5,7 +5,7 @@ Note: it builds the tree looking only at Subject and Issuer fields. It does NOT 
 
 ### Example:
 ```
-cert_tree.py -p ./certs/ca_list.pem  
+cert_tree.py -p ~/.certs/ca_list.pem  
 ━ CorpRoot            [1]
     ┣━ ServerCA       [2]
     ┣━ example_cert   [3]
@@ -16,7 +16,7 @@ cert_tree.py -p ./certs/ca_list.pem
     ┣━ other1         [7] [EXPIRED on: 2017-06-16 21:12:18]
     ┗━ AnotherOne     [9]
     
-cert_tree.py -pr ./certs/ca_list.pem 1>/dev/null 2>ca_list_new.pem 
+cert_tree.py -pr ~/.certs/ca_list.pem 1>/dev/null 2>ca_list_new.pem 
 
 $ cert_tree.py -pe ca_list_new.pem  
 ━ CorpRoot           [1] [valid until: 2040-05-05 18:19:20]
