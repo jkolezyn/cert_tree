@@ -18,7 +18,7 @@ cert_tree.py -p ~/.certs/ca_list.pem
     
 cert_tree.py -pr ~/.certs/ca_list.pem 1>/dev/null 2>ca_list_new.pem 
 
-$ cert_tree.py -pe ca_list_new.pem  
+cert_tree.py -pe ca_list_new.pem  
 ━ CorpRoot           [1] [valid until: 2040-05-05 18:19:20]
     ┣━ ServerCA      [2] [valid until: 2025-05-29 19:51:12]
     ┣━ example_cert  [3] [valid until: 2025-06-15 00:07:55]
