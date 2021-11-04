@@ -189,8 +189,7 @@ def main():
     cert_file = args.cert_file
 
     # Check if the cert is in the right format
-    proc = subprocess.run(['openssl', 'x509', '-noout', 'in', cert_file], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    print(proc.returncode)
+    proc = subprocess.run(['openssl', 'x509', '-noout', '-in', cert_file], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     if proc.returncode > 0:
         print('The cert must be in pem format')
         sys.exit(1)
