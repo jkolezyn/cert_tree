@@ -187,10 +187,18 @@ def main():
 
     args = parser.parse_args()
     cert_file = args.cert_file
-    if not cert_file.endswith('pem'):
+
+    # Check if the cert is in the right format
+    proc = subprocess.run(['openssl', 'x509', '-noout', 'in', cert_file], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    print(proc.returncode)
+    if proc.returncode > 0:
         print('The cert must be in pem format')
         sys.exit(1)
         # TODO what about trying to convert from cer or der?
+        # -> convert der to pem : openssl x509 -inform der -in cert_file.cer -out temp_out.pem
+
+
+    
 
     certs = extract_certs_as_strings(cert_file)
     if not certs:
