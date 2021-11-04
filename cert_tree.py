@@ -196,9 +196,7 @@ def main():
         # TODO what about trying to convert from cer or der?
         # -> convert der to pem : openssl x509 -inform der -in cert_file.cer -out temp_out.pem
 
-
     
-
     certs = extract_certs_as_strings(cert_file)
     if not certs:
         print('No certs found in the pem file')
