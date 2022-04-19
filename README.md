@@ -3,6 +3,21 @@ Simple script to view a chain of x509 certificates stored in a single PEM file a
 
 Note: it builds the tree looking only at Subject and Issuer fields. It does NOT validate the certificate chain.
 
+### Usage
+cert_tree.py --help 
+usage: cert_tree.py [-h] [-p] [-e] [-r] cert_file
+
+View tree of certificates in pem bundle
+
+positional arguments:
+  cert_file             the cert file in pem format
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p, --position        show position of cert in file
+  -e, --expiry          show expiry date
+  -r, --remove_expired  remove expired certs and output the good ones to stderr
+
 ### Examples:
 ```
 cert_tree.py -p ~/.certs/ca_list.pem  
@@ -39,3 +54,6 @@ cert_tree.py ~/.certs/myothercert.pem
     ┗━ IntermediateCert
 ━ OtherCert
 ```
+
+### See also
+https://jkolezyn.github.io/cert_tree/
