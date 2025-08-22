@@ -73,14 +73,14 @@ def create_cert(cert_content, position):
     issuer = ''
     date = None
     for line in out.decode().split('\n'):
-        match = re.match("^\s*(\w*): .*CN ?= ?(.*)$", line)
+        match = re.match(r"^\s*(\w*): .*CN ?= ?(.*)$", line)
         if match:
             if match.group(1) == 'Subject':
                 subject = match.group(2)
             elif match.group(1) == 'Issuer':
                 issuer = match.group(2)
         else:
-            m = re.match("^\s*Not After\s?: (?P<date>.*)GMT$", line)
+            m = re.match(r"^\s*Not After\s?: (?P<date>.*)GMT$", line)
             if m:
                 date = datetime.strptime(m.group(1).strip(), '%b %d %H:%M:%S %Y')
 
