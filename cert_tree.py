@@ -72,8 +72,8 @@ def create_cert(cert_content, position):
     subject = ''
     issuer = ''
     date = None
-    for line in out.decode().split('\n'):
-        match = re.match(r"^\s*(\w*): .*CN ?= ?(.*)$", line)
+    for line in out.decode(errors='replace').splitlines():
+        match = re.match(r"^\s*(\w*): .*(?:CN(?!OU)|OU) ?= ?(.*)$", line)
         if match:
             if match.group(1) == 'Subject':
                 subject = match.group(2)
