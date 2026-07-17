@@ -3,6 +3,8 @@ Simple script to view a chain of x509 certificates stored in a single PEM file a
 
 Note: it builds the tree looking only at Subject and Issuer fields. It does NOT validate the certificate chain.
 
+Requires Python 3.6 or newer (the script uses f-strings) and `openssl` available on `PATH`.
+
 ### Usage
 ```
 cert_tree.py --help 
